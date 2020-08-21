@@ -1,4 +1,4 @@
-# .dotfiles
+# .dotfiles - David Pellissier, 21/08/2020
 
 ## Fichiers, à partager
 - Tmux: .tmux.conf
