@@ -1,0 +1,3 @@
+syntax enable 
+colorscheme zellner
+set mouse=a

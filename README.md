@@ -17,5 +17,5 @@
 
 
 
-
+(todo: vim color scheme)
 (todo: install lolcat :3)
