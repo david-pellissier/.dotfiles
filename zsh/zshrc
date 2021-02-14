@@ -47,7 +47,7 @@ ZSH_THEME="kardan"
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -70,7 +70,7 @@ ZSH_THEME="kardan"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git cp vi-mode)
+plugins=(git cp)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -91,25 +91,23 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ASM="cd /run/media/david/Cours/BA3_ASM"
-alias BDR="cd /run/media/david/Cours/BA3_BDR"
-alias CRY="cd /run/media/david/Cours/BA3_CRY"
-alias POO1="cd /run/media/david/Cours/BA3_POO1"
-alias PST="cd /run/media/david/Cours/BA3_PST"
-alias SYE="cd /run/media/david/Cours/BA3_SYE"
 
+## Raccourcis
+alias ADS="cd /run/media/david/Cours/BA4_ADS"
+alias GEN="cd /run/media/david/Cours/BA4_GEN"
+alias PCO="cd /run/media/david/Cours/BA4_PCO"
+alias PRO="cd /run/media/david/Cours/BA4_PRO"
+alias RES="cd /run/media/david/Cours/BA4_RES"
+alias SER="cd /run/media/david/Cours/BA4_SER"
+alias SLO="cd /run/media/david/Cours/BA4_SLO"
+alias SOS="cd /run/media/david/Cours/BA4_SOS"
+alias SRX="cd /run/media/david/Cours/BA4_SRX"
 # Autres
 alias CTF="cd /run/media/david/Cours/Divers/CTFs"
+alias BCK="cd /run/media/david/Cours/.backups"
 
-#Faces https://textfac.es/
+
+## Faces https://textfac.es/
 alias lennyf='echo -n "( ͡° ͜ʖ ͡°)" | xclip -selection c'
 alias dunnof='echo -n "¯\_(ツ)_/¯" | xclip -selection c'
 alias kawaiif='echo -n "(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧" | xclip -selection c'
@@ -118,5 +116,26 @@ alias tablef='echo -n "(╯°□°）╯︵ ┻━┻" | xclip -selection c'
 alias sunf='echo -n "(•_•) ( •_•)>⌐■-■ (⌐■_■)" | xclip -selection c'
 alias nekof='echo -n "ฅ^•ﻌ•^ฅ" | xclip -selection c'
 
-#Active vi mode ?
+## ???
+alias stfu="shutdown 0"
+alias please='sudo $(history -p \!\!)' # source: https://www.reddit.com/r/ProgrammerHumor/comments/ikrj2a/yeeeeet/
+alias rr='curl -s -L bit.ly/10hA8iC | bash'
+## Utiles je crois
+alias clear-s="rm -rf ~/.tmux/resurrect & mkdir .tmux/resurrect"
+alias scheck="python ~/Projets/cmdNotif/scheck.py"
+alias newmd="touch file.md | vim test.md" 
+alias internetplz='scheck "ping 1.1.1.1 -c 1" "bytes from" "connection restored, bitch" -i 30'
+alias rrs="python /run/media/david/Cours/BA3_BDR/.update.py"
+alias dockerup="sudo systemctl start docker"
+
+
+
+
+
+
+
+
+# Trucs osef
 bindkey -v
+
+JAVA_HOME="/usr/lib/jvm/java-11-adoptopenjdk"

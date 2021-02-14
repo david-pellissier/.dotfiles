@@ -1,3 +1,49 @@
-syntax enable 
+syntax on
+if has('python3')
+endif
+
+set noerrorbells
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set expandtab
+set nu
+set smartindent
+set nowrap
+set smartcase
+set noswapfile
+set nobackup
+set undodir=~/.vim/undodir
+set undofile
+set incsearch
+set hlsearch
+let mapleader=" "
+
+"set termguicolors"
+
 colorscheme zellner
+ 
 set mouse=a
+
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'vim-utils/vim-man'
+Plug 'lyuts/vim-rtags'
+Plug 'https://github.com/ctrlpvim/ctrlp.vim.git'
+Plug 'https://github.com/ycm-core/YouCompleteMe.git'
+Plug 'mbbill/undotree'
+Plug 'christoomey/vim-system-copy'
+
+call plug#end()
+
+let g:ctrlp_use_caching = 0
+
+
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
+nnoremap <leader>u :UndotreeShow<CR>
+nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30 <CR>
+nnoremap <silent> <leader>gd :YcmCompleter GoTo<CR>
+nnoremap <silent> <leader>gf :YcmCompleter FixIt<CR>
